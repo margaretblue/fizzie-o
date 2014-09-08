@@ -13,7 +13,32 @@
 @end
 
 @implementation AppDelegate
-            
+
+-(BOOL)isBuzzed:(NSInteger)number{
+    if(number %3 == 0){
+    return YES;
+        // ???how do you "check to see if the number contains the character 3" ?? whats a character?
+        //} else {
+    } else {
+    return NO;
+    }
+}
+//Add a method called isBuzzed that takes an integer and returns a bool
+//The method should check to see if the integer is a multiple of 3
+//If the number is a multiple of 3 it should return true
+//If the number is not a multiple of 3 the method should check to see if the number contains the character 3
+//If the number contains the character three it should return true
+//Otherwise it should return false
+
+-(BOOL)isFizzed:(NSInteger)number{
+    if(number %5 == 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
