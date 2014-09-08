@@ -23,12 +23,6 @@
     return NO;
     }
 }
-//Add a method called isBuzzed that takes an integer and returns a bool
-//The method should check to see if the integer is a multiple of 3
-//If the number is a multiple of 3 it should return true
-//If the number is not a multiple of 3 the method should check to see if the number contains the character 3
-//If the number contains the character three it should return true
-//Otherwise it should return false
 
 -(BOOL)isFizzed:(NSInteger)number{
     if(number %5 == 0) {
@@ -39,8 +33,38 @@
     
 }
 
+//In your didFinishLaunching method loop through numbers 1-100
+//For each integer call isBuzzed and isFizzed
+//If the integer isBuzzed but not isFizzed print "Buzz"
+//If the integer isFizzed but not isBuzzed print "Fizz"
+//If the integer isFizzed and isBuzzed print "FizzBuzz"
+//If the integer is not isFizzed and is not isBuzzed print the number
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //In your didFinishLaunching method loop through numbers 1-100
+    int i=1;
+    for (i = 1; i<100; i++){
+        BOOL fizzed = [self isFizzed:(NSInteger)i];
+        BOOL buzzed = [self isBuzzed:(NSInteger)i];
+        // http://stackoverflow.com/questions/17965328/how-do-i-print-out-bool-values-with-words?lq=1
+        if(fizzed == YES && buzzed == NO){
+            NSLog(@"%d - Fizz", i);
+        } else if (fizzed == NO && buzzed == YES){
+            NSLog(@"%d - Buzz", i);
+        } else if (fizzed == YES && buzzed == YES){
+            NSLog(@"%d - FizzBuzz", i);
+        } else {
+            NSLog(@"%d", i);
+        //} else (buzzed == YES && fizzed == NO){
+        //    NSLog(@"%d - Buzz", i);
+        }
+    };
+    //For each integer call isBuzzed and isFizzed
+    //If the integer isBuzzed but not isFizzed print "Buzz"
+    //If the integer isFizzed but not isBuzzed print "Fizz"
+    //If the integer isFizzed and isBuzzed print "FizzBuzz"
+    //If the integer is not isFizzed and is not isBuzzed print the number
     // Override point for customization after application launch.
     return YES;
 }
