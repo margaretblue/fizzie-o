@@ -33,14 +33,6 @@
     
 }
 
-//In your didFinishLaunching method loop through numbers 1-100
-//For each integer call isBuzzed and isFizzed
-//If the integer isBuzzed but not isFizzed print "Buzz"
-//If the integer isFizzed but not isBuzzed print "Fizz"
-//If the integer isFizzed and isBuzzed print "FizzBuzz"
-//If the integer is not isFizzed and is not isBuzzed print the number
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //In your didFinishLaunching method loop through numbers 1-100
     int i=1;
@@ -56,16 +48,8 @@
             NSLog(@"%d - FizzBuzz", i);
         } else {
             NSLog(@"%d", i);
-        //} else (buzzed == YES && fizzed == NO){
-        //    NSLog(@"%d - Buzz", i);
         }
     };
-    //For each integer call isBuzzed and isFizzed
-    //If the integer isBuzzed but not isFizzed print "Buzz"
-    //If the integer isFizzed but not isBuzzed print "Fizz"
-    //If the integer isFizzed and isBuzzed print "FizzBuzz"
-    //If the integer is not isFizzed and is not isBuzzed print the number
-    // Override point for customization after application launch.
     return YES;
 }
 
